@@ -1,20 +1,16 @@
-# JetMusic - Figma Assets
+# React + Vite
 
-Este repositório contém os assets e imagens exportados do Figma para o projeto **JetMusic**.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 📁 Estrutura do Repositório
+Currently, two official plugins are available:
 
-As pastas estão divididas conforme as seções e elementos da interface exportados do Figma:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-*   **`logo/`**: Arquivos de logotipo da JetMusic em várias resoluções.
-*   **`tipografia/`**: Recursos relacionados aos elementos tipográficos.
-*   **`jetmusic_home/`** até **`jetmusic_home_6/`**: Telas, blocos e seções principais da página inicial (Home) do JetMusic exportadas em resoluções de 1x a 4x.
-*   **`screenshot_2026_05_27_at_20_03_05_1/`**: Capturas de tela de referência.
-*   **`91fd54886c41eed11e80351ec3e23c20_1/`**: Outros elementos gráficos exportados.
+## React Compiler
 
-## 🚀 Como Utilizar os Assets
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-Os arquivos de imagem estão em formato `.webp` de alta performance, prontos para serem integrados em projetos web ou mobile, otimizando o carregamento da página. Cada pasta contém variações de tamanho (ex: `1x`, `2x`, `3x`, `4x`) para garantir a melhor qualidade visual em diferentes densidades de tela (telas normais, Retina, etc.).
+## Expanding the ESLint configuration
 
----
-*Exportado e organizado em 30 de maio de 2026.*
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
