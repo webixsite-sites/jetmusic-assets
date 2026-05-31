@@ -1,0 +1,102 @@
+.flying-covers-viewport {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Permite interações em botões reais por baixo */
+  z-index: 80; /* Fica acima das fatias de fundo e abaixo da Navbar */
+  overflow: hidden;
+}
+
+.flying-covers-perspective-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1500px;
+  transform-style: preserve-3d;
+}
+
+.flying-cover-card {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  transform-style: preserve-3d;
+  will-change: transform, border-radius, box-shadow, opacity;
+  background: #0f0f0f;
+  transition: box-shadow 0.3s ease;
+  pointer-events: auto; /* Permite hover micro-animado se desejado */
+}
+
+.cover-inner-3d {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  border-radius: inherit;
+}
+
+.cover-img-real {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backface-visibility: hidden;
+}
+
+/* Furo central do Vinil que aparece dinamicamente no morphing da seção 3 */
+.vinyl-center-hole {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  background: #070707;
+  border: 4px solid #1a1a1a;
+  border-radius: 50%;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+}
+
+/* Responsividade elegante para telas menores (notebooks menores, tablets e mobile) */
+@media (max-width: 1200px) {
+  .flying-cover-card {
+    width: 130px;
+    height: 130px;
+  }
+  .vinyl-center-hole {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .flying-cover-card {
+    width: 100px;
+    height: 100px;
+  }
+  .vinyl-center-hole {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .flying-cover-card {
+    width: 75px;
+    height: 75px;
+  }
+  .vinyl-center-hole {
+    width: 14px;
+    height: 14px;
+  }
+}

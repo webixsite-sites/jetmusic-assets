@@ -5,6 +5,7 @@ import Institution from './components/Institution';
 import BusinessModels from './components/BusinessModels';
 import HallOfFame from './components/HallOfFame';
 import FooterCTA from './components/FooterCTA';
+import FlyingCovers from './components/FlyingCovers';
 import './App.css';
 
 export default function App() {
@@ -45,6 +46,9 @@ export default function App() {
     <div className="app-wrapper">
       {/* Navbar flutuante */}
       <Navbar />
+
+      {/* Camada global de capas flutuantes 3D conectada ao scroll */}
+      <FlyingCovers />
 
       {/* Conteúdo principal */}
       <main>
