@@ -9,11 +9,12 @@
   align-items: center;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   border-bottom: 1px solid transparent;
+  background: transparent;
 }
 
 .navbar.scrolled {
   height: 70px;
-  background: rgba(7, 7, 7, 0.75);
+  background: rgba(7, 7, 7, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -36,10 +37,17 @@
   cursor: pointer;
 }
 
-.logo-img {
-  height: 32px;
+/* Nova logo oficial transparente do Figma */
+.logo-img-nova {
+  height: 28px;
   width: auto;
   object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(227, 26, 34, 0.35));
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover .logo-img-nova {
+  transform: scale(1.05);
 }
 
 .logo-text {
@@ -113,6 +121,6 @@
 
 @media (max-width: 768px) {
   .navbar-links {
-    display: none; /* Em mobile podemos esconder por simplicidade ou adicionar menu hamburguer */
+    display: none;
   }
 }

@@ -1,123 +1,59 @@
 .footer-cta-section {
+  position: relative;
   width: 100%;
-  background-color: var(--primary-color);
-  padding: 120px 0 120px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  text-align: center;
-}
-
-.footer-cta-container {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Logotipo Circular Secundário */
-.footer-logo-container {
-  margin-bottom: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.circular-jet-logo {
-  position: relative;
-  width: 140px;
-  height: 140px;
   background-color: #070707;
-  border-radius: 50%;
+  overflow: hidden;
   display: flex;
-  align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-.jet-icon {
-  font-size: 2.5rem;
-  color: var(--primary-color);
-  z-index: 3;
-  transform: rotate(-45deg);
-  display: inline-block;
-  text-shadow: 0 4px 8px rgba(0,0,0,0.5);
-}
-
-.circular-logo-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  animation: rotateLogoText 20s linear infinite;
-  pointer-events: none;
-}
-
-.logo-svg-text {
-  font-family: var(--font-title);
-  font-weight: 800;
-  font-size: 8px;
-  letter-spacing: 0.1em;
-}
-
-@keyframes rotateLogoText {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Título com Outline */
-.footer-cta-title {
-  font-family: var(--font-title);
-  font-size: clamp(2.2rem, 5vw, 4.2rem);
-  font-weight: 900;
-  color: #ffffff;
-  margin-bottom: 24px;
-  line-height: 1.15;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 12px;
 }
 
-.title-outlined-box {
-  border: 2px solid #000000;
-  color: #000000;
-  padding: 4px 28px;
+.footer-cta-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.footer-cta-main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Botão interativo sobreposto no CTA do Rodapé */
+.footer-interactive-btn {
+  position: absolute;
+  top: 61.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16%;
+  height: 5.2%;
+  min-width: 220px;
+  min-height: 50px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
   border-radius: 50px;
-  font-weight: 900;
-  font-size: 0.95em;
-  letter-spacing: -0.01em;
-  display: inline-block;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  outline: none;
+  transition: all 0.3s ease;
 }
 
-/* Subtexto */
-.footer-cta-subtext {
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-size: 1.15rem;
-  line-height: 1.6;
-  color: #ffffff;
-  max-width: 800px;
-  margin-bottom: 50px;
+.footer-interactive-btn:hover {
+  background: rgba(153, 255, 0, 0.1);
+  box-shadow: 0 0 25px rgba(153, 255, 0, 0.4);
+  transform: translate(-50%, -52%) scale(1.02);
 }
 
-.footer-cta-action .btn-neon {
-  background-color: var(--accent-color);
-  color: #000000;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+.footer-interactive-btn:active {
+  transform: translate(-50%, -49%) scale(0.98);
 }
 
-.footer-cta-action .btn-neon:hover {
-  background-color: #aeff24;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-  transform: translateY(-4px) scale(1.03);
+@media (max-width: 768px) {
+  .footer-interactive-btn {
+    width: 60%;
+    height: 4.8%;
+    top: 61.5%;
+  }
 }

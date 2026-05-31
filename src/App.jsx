@@ -5,7 +5,6 @@ import Institution from './components/Institution';
 import BusinessModels from './components/BusinessModels';
 import HallOfFame from './components/HallOfFame';
 import FooterCTA from './components/FooterCTA';
-import Footer from './components/Footer';
 import './App.css';
 
 export default function App() {
@@ -64,9 +63,6 @@ export default function App() {
         {/* Seção 6: CTA Final */}
         <FooterCTA />
       </main>
-
-      {/* Rodapé do site */}
-      <Footer />
     </div>
   );
 }
